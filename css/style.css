@@ -1,0 +1,81 @@
+body {
+  margin: 70px 144px;;
+  background-color: #090909;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#headerandnav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul {
+  text-align: center;
+}
+
+.social-media {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+h1, h2, label, p {
+  font-family: "Playfair Display", system-ui;
+  margin: 0;
+  padding: 0;
+  color: #f4f4f4;
+}
+
+h1, h2, label {
+  font-weight: bolder;
+}
+
+p {
+  font-weight: lighter;
+}
+
+.centered {
+  text-align: center;
+}
+
+h1 {
+  font-size: 85px;
+}
+
+h2, label {
+  font-size: 50px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #DE9729;
+}
+
+a:hover {
+  color: red;
+}
+
+#featured {
+  display: flex;
+  flex-direction: row;
+}
+
+#calltoaction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

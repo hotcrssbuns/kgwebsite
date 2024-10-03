@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <script src="/js/main.js" defer></script>
     <title>Kelty Greye - Official Website</title>
 </head>
 <body>
     <header>
-      <h1>Kelty Greye</h1>
-      <nav>
-        <ul>
-          <li><a href="/pages/music.html">Music</li></a>
-          <li><a href="/pages/about.html">About</li></a>
-          <li><a href="/pages/contact.html">Contact</li></a>
-        </ul>
+      <div id="headerandnav">
+        <h1>Kelty Greye</h1>
+        <nav>
+          <ul>
+            <li><a href="/pages/music.html">Music</li></a>
+            <li><a href="/pages/about.html">About</li></a>
+            <li><a href="/pages/contact.html">Contact</li></a>
+          </ul>
+        </nav>
         <div class="social-media">
           <a href="https://www.tiktok.com/@kelty_greye" target="_blank"><button>TikTok</button></a>
           <a href="https://www.instagram.com/kelty_greye/" target="_blank"><button>Instagram</button></a>
@@ -26,16 +31,18 @@
     </header>
     <main>
       <section id="featured">
-        <h2>State of Mind Out Now!</h2>
-        <a href="https://open.spotify.com/artist/61hxbfka98EVNkcgMC8dDI?si=dC2x2r-WTHmK6OkpjymW1w" target="_blank">
-          <button>Stream/Download</button>
-        </a>
+        <div id="calltoaction">
+          <h2>State of Mind Out Now!</h2>
+          <a href="https://open.spotify.com/artist/61hxbfka98EVNkcgMC8dDI?si=dC2x2r-WTHmK6OkpjymW1w" target="_blank">
+            <button>Stream/Download</button>
+          </a>
+        </div>
         <img src="/images/themiddle.jpg"/>
       </section>
       <section id="music">
-        <h2>Music</h2>
+        <h2 class="centered">Music</h2>
         <button>Stream/Download</button>
-        <img src="/images/themiddle.jpg"/>
+        <img class="centeredimage" src="/images/themiddle.jpg"/>
       </section>
       <section id="signup">
         <form action="/action_page.php">
