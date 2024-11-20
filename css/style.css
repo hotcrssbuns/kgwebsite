@@ -1,12 +1,12 @@
 /* Base styles */
 :root {
-  --color-background: #1E1E1E;
-  --color-text: #F4F4F4;
-  --color-primary: #F4A261;
-  --color-secondary: #E76F51;
-  --color-accent: #2A9D8F;
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Lato', sans-serif;
+  --color-background: #1e1e1e;
+  --color-text: #f4f4f4;
+  --color-primary: #f4a261;
+  --color-secondary: #e76f51;
+  --color-accent: #2a9d8f;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Lato", sans-serif;
 }
 
 body {
@@ -27,35 +27,50 @@ body {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
-  margin-bottom: 20px;
+  margin-bottom: 0.5em;
+  font-weight: bolder;
+  text-align: center;
 }
 
 h1 {
   font-size: 3.5rem;
+  letter-spacing: -0.02em;
 }
 
 h2 {
   font-size: 2.5rem;
 }
 
-.featured-image, .album-cover {
-  border: 3px solid var(--color-primary);
+p {
+  margin-bottom: 0.5em;
+}
+
+.featured-image,
+.album-cover {
   box-shadow: 0 0 20px var(--color-accent);
 }
 
 #hero::before {
-  background: radial-gradient(circle, transparent 0%, var(--color-background) 100%);
+  background: radial-gradient(
+    circle,
+    transparent 0%,
+    var(--color-background) 100%
+  );
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Header and Navigation */
 header {
-  padding: 20px 0;
+  padding: 15px 0;
   background-color: rgba(30, 30, 30, 0.9);
   position: fixed;
   width: 100%;
@@ -138,19 +153,19 @@ img {
 
 /* Hero Section */
 #hero {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('/images/hero-bg.jpg');
+  background-image: url("/images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
 #hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -169,6 +184,11 @@ img {
   margin-bottom: 20px;
 }
 
+hr {
+  border-color: #1f1f1f;
+  margin-bottom: 30px;
+}
+
 #hero p {
   font-size: 1.5rem;
   margin-bottom: 30px;
@@ -176,7 +196,7 @@ img {
 
 /* Featured Section */
 #featured {
-  padding: 50px 0;
+  padding: 0px 0;
   text-align: center;
 }
 
@@ -186,26 +206,7 @@ img {
   margin-top: 30px;
   margin-bottom: 30px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Music Section */
-#music {
-  padding: 50px 0;
-  background-color: rgba(42, 157, 143, 0.1);
-}
-
-.music-player {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.album-cover {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
 }
 
 /* Sign Up Section */
@@ -222,12 +223,28 @@ form {
 }
 
 #contact {
-  padding-top: 80px;
+  padding-top: 100px;
+  margin-bottom: 30px;
+}
+
+#featured-music {
+  padding-top: 100px;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.music-item {
+  width: 100%;
 }
 
 #about {
-  padding: 100px 0;
-  background-color: var(--color-background);
+  padding: 0 0;
+  padding-bottom: 20px;
 }
 
 #about .featured-image {
@@ -250,8 +267,15 @@ form .btn {
 /* Footer */
 footer {
   background-color: rgba(30, 30, 30, 0.9);
-  padding: 40px 0;
+  padding: 15px 0;
+  margin-bottom: 20px;
   text-align: center;
+  left: 0px;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 .social-media {
@@ -273,128 +297,59 @@ footer {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   nav {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   nav ul {
-      margin-top: 20px;
+    margin-top: 20px;
   }
 
   nav li {
-      margin: 0 10px;
+    margin: 0 10px;
   }
 
   #hero h1 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 
   #hero p {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .music-grid {
+    grid-template-columns: 1fr;
   }
 
   form {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
-  input[type="email"], form .btn {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 30px;
-      margin-bottom: 10px;
+  input[type="email"],
+  form .btn {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 30px;
+    margin-bottom: 10px;
   }
 
-  .container::before, .container::after {
+  .container::before,
+  .container::after {
     display: none;
-  }
-}
-
-.music-player {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  position: relative;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.current-song {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.album-cover {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.nav-button {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: var(--color-primary);
-  cursor: pointer;
-  transition: color 0.3s ease;
-  position: absolute;
-  top: 150px; /* Half of the album cover height */
-  transform: translateY(-50%);
-}
-
-.nav-button:hover {
-  color: var(--color-secondary);
-}
-
-#prevSong {
-  left: -40px;
-}
-
-#nextSong {
-  right: -40px;
-}
-
-#songTitle {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-
-@media (max-width: 768px) {
-  .music-player {
-      flex-direction: column;
-      gap: 10px;
-  }
-
-  .nav-button {
-      position: static;
-      transform: none;
-  }
-
-  .album-cover {
-      width: 200px;
-      height: 200px;
-  }
-  
-  #prevSong, #nextSong {
-      margin: 10px 0;
   }
 }
 
 /* Add decorative elements */
 .container::before {
-  content: '✦';
+  content: "✦";
   font-size: 2rem;
   color: var(--color-primary);
   position: absolute;
@@ -404,11 +359,174 @@ footer {
 }
 
 .container::after {
-  content: '✦';
+  content: "✦";
   font-size: 2rem;
   color: var(--color-primary);
   position: absolute;
   bottom: 10px;
   right: 10px;
   opacity: 0.5;
+}
+
+/* Responsive Whimsigoth-inspired Contact Form CSS */
+.contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-form {
+  background-color: rgba(30, 30, 46, 0.6);
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+  padding: 40px;
+  position: relative; /* For decorative elements */
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form h2 {
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  max-width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-accent);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-accent);
+  box-shadow: 0 0 15px rgba(167, 139, 250, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+
+/* Add some mystical decorations */
+.contact-form::before,
+.contact-form::after {
+  content: "✦";
+  font-size: 24px;
+  color: var(--color-accent);
+  position: absolute;
+  opacity: 0.5;
+}
+
+.contact-form::before {
+  top: 10px;
+  left: 10px;
+}
+
+.contact-form::after {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .contact-form-container {
+    padding: 10px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .contact-form::before,
+  .contact-form::after {
+    display: none;
+  }
+
+  .featured-image {
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .featured {
+    padding-top: 100px;
+  }
+}
+
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  display: none;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
